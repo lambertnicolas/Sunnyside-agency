@@ -1,0 +1,46 @@
+footer {
+  background-color: #90d4c6;
+  width: 100%;
+  height: 350px;
+  #container_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 72px;
+    svg {
+      margin-bottom: 40px;
+    }
+    #ul_links {
+      @include ul_flex(57px);
+      margin-bottom: 88px;
+      margin-top: 0px;
+      a {
+        color: #2c7566;
+        text-decoration: none;
+        font-family: "Barlow", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25px;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    #ul_icons {
+      @include ul_flex(28px);
+      margin-top: 0px;
+      a {
+        &:hover {
+          fill: #ffff;
+        }
+        path {
+          &:hover {
+            fill: #ffff;
+          }
+        }
+      }
+    }
+  }
+}

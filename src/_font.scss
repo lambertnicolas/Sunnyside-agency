@@ -1,0 +1,10 @@
+@mixin fraunces($pt, $fam, $size, $color, $weight, $line, $spacing, $trf) {
+  font-family: "Fraunces $pt $fam";
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+  color: $color;
+  letter-spacing: $spacing;
+  text-decoration: none;
+  text-transform: $trf;
+}

@@ -1,0 +1,10 @@
+@media screen and(min-width: 640px) {
+  .images {
+    width: 100%;
+    display: flex;
+
+    img {
+      width: 25%;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin ul_flex($gap) {
+  list-style-type: none;
+  display: flex;
+  gap: $gap;
+  padding: 0;
+}
