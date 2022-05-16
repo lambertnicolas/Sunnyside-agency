@@ -1,84 +1,182 @@
 .main_article {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "oeuf"
+    "jaune"
+    "verre"
+    "rouge";
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   width: 100%;
   .imgart {
-    width: 100%;
+    &--oeuf {
+      grid-area: oeuf;
+      width: 100%;
+    }
+    &--verre {
+      grid-area: verre;
+      width: 100%;
+    }
   }
   &__text {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .container_case {
-      margin: 0 auto;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      h2 {
-        @include fraunces(
-          9pt,
-          Soft,
-          32px,
-          #24303e,
-          900,
-          39px,
-          -0.228571px,
-          none
-        );
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 32px;
-      }
-      p {
-        text-align: center;
-        font-family: "Barlow", sans-serif;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 30px;
-        color: #808397;
-        margin-bottom: 40px;
-        margin-top: 0;
-        padding: 0 20px;
-      }
-      a {
-        @include fraunces(9pt, Soft, 15px, #24303e, 900, 25px, 1px, uppercase);
-        text-decoration: none;
+    &--transform {
+      grid-area: jaune;
+      .container_case {
         margin: 0 auto;
-        position: relative;
-        z-index: 1;
-        margin-bottom: 64px;
-
-        &:hover span {
-          opacity: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        h2 {
+          font-family: "Fraunces", sans-serif;
+          font-size: 32px;
+          color: #24303e;
+          font-weight: 900;
+          line-height: 39px;
+          text-align: center;
+          margin-top: 64px;
+          margin-bottom: 24px;
         }
-
-        #yellow {
-          height: 5px;
-          width: 128px;
-          background-color: yellow;
-          position: absolute;
-          border-radius: 5px;
-          z-index: -1;
-          bottom: 1px;
-          left: -5px;
-          opacity: 0.25;
+        p {
+          text-align: center;
+          font-family: "Barlow", sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 30px;
+          color: #808397;
+          margin-bottom: 32px;
+          margin-top: 0;
+          padding: 0 24px;
         }
+        a {
+          font-family: "Fraunces", sans-serif;
+          font-size: 15px;
+          color: #24303e;
+          font-weight: 900;
+          line-height: 25px;
+          letter-spacing: 1px;
+          text-decoration: none;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+          margin-bottom: 64px;
+          h4 {
+            font-family: "Fraunces", sans-serif;
+            font-size: 15px;
+            font-weight: 900;
+            line-height: 25px;
+            letter-spacing: 1px;
+            color: #24303e;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          #yellow {
+            height: 5px;
+            width: 128px;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 5px;
+            z-index: -1;
+            bottom: 1px;
+            left: -5px;
+            opacity: 0.25;
+          }
+          #red {
+            height: 5px;
+            width: 128px;
+            background-color: red;
+            position: absolute;
+            border-radius: 5px;
+            z-index: -1;
+            bottom: 1px;
+            left: -5px;
+            opacity: 0.25;
+          }
+        }
+      }
+    }
+    &--stand {
+      grid-area: rouge;
+      .container_case {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        h2 {
+          font-family: "Fraunces", sans-serif;
+          font-size: 32px;
+          color: #24303e;
+          font-weight: 900;
+          line-height: 39px;
+          text-align: center;
+          margin: 64px 24px 24px 24px;
+        }
+        p {
+          text-align: center;
+          font-family: "Barlow", sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 30px;
+          color: #808397;
+          margin-bottom: 32px;
+          margin-top: 0;
+          padding: 0 24px;
+        }
+        a {
+          font-family: "Fraunces", sans-serif;
+          font-size: 15px;
+          color: #24303e;
+          font-weight: 900;
+          line-height: 25px;
+          letter-spacing: 1px;
+          text-decoration: none;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+          margin-bottom: 64px;
+          h4 {
+            font-family: "Fraunces", sans-serif;
+            font-size: 15px;
+            font-weight: 900;
+            line-height: 25px;
+            letter-spacing: 1px;
+            color: #24303e;
+          }
+          #yellow {
+            height: 5px;
+            width: 128px;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 5px;
+            z-index: -1;
+            bottom: 1px;
+            left: -5px;
+            opacity: 0.25;
+            &:hover {
+              opacity: 1;
+            }
+          }
 
-        #red {
-          height: 5px;
-          width: 128px;
-          background-color: red;
-          position: absolute;
-          border-radius: 5px;
-          z-index: -1;
-          bottom: 1px;
-          left: -5px;
-          opacity: 0.25;
+          #red {
+            height: 5px;
+            width: 128px;
+            background-color: red;
+            position: absolute;
+            border-radius: 5px;
+            z-index: -1;
+            bottom: 1px;
+            left: -5px;
+            opacity: 0.25;
+            &:hover {
+              opacity: 1;
+            }
+          }
         }
       }
     }
